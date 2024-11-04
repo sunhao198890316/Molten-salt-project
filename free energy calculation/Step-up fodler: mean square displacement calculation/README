@@ -1,0 +1,10 @@
+This file contains the input necessary to calculate the mean square displacement (MSD) for NaCl, KCl, and Na-K-Cl. 
+These MSD values are essential for our free energy calculations.
+
+To proceed, we need to integrate the machine learning potential with the MOMB pair potential in LAMMPS, 
+as the MOMB potential shares the same functional form as the DFT-D2 method. 
+
+Detailed information about the DFT-D2 parameters can be found in the attached paper within this folder. 
+Alternatively, you can download the paper using the following link: [Download the research paper](https://doi.org/10.1002/jcc.20495)
+
+Please let me know if you have any questions or need further assistance (sunhao20110920@126.com).
