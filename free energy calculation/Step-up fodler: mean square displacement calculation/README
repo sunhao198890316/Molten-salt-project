@@ -7,4 +7,12 @@ as the MOMB potential shares the same functional form as the DFT-D2 method.
 Detailed information about the DFT-D2 parameters can be found in the attached paper within this folder. 
 Alternatively, you can download the paper using the following link: [Download the research paper](https://doi.org/10.1002/jcc.20495)
 
+
+In the NaCl_mean_square_displacement folder, you’ll find various subfolders, each containing files for calculating the mean square displacement (MSD) at different temperatures. 
+I’ll use the 100 folder as an example to explain the contents.
+     in.run: This file is the input script for LAMMPS, setting up and running the simulation.
+     output.run: This file contains the complete output from the LAMMPS simulation.
+Key information related to the MSD calculations is extracted from the output.run file and saved in the result file.
+     In the result file, the MSD values for each atomic species (Na, Cl, and K) are stored in the last three columns, respectively.
+
 Please let me know if you have any questions or need further assistance (sunhao20110920@126.com).
