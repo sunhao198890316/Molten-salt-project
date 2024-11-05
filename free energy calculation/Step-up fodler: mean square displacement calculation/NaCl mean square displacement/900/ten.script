@@ -1,0 +1,31 @@
+#!/bin/bash
+#SBATCH --account=def-hpcg1725
+
+#SBATCH --partition=reserved
+#SBATCH --qos=privileged
+
+
+
+#SBATCH --nodes=2
+#SBATCH --ntasks=48
+#SBATCH --cpus-per-task=1
+#SBATCH --job-name=MPI_test
+#SBATCH --output=out.run
+#SBATCH --time=1-23:59 # time (DD-HH:MM)
+#SBATCH --mem=9G
+
+module load       StdEnv/2020  gcc/9.3.0  cuda/11.2.2
+module load openmpi/4.0.3
+
+
+export OMP_NUM_THREADS=1
+
+
+cd $SLURM_SUBMIT_DIR
+
+echo "Starting run at: Thu Oct 31 04:36:21 PM EDT 2024"
+
+
+
+
+mpirun --oversubscribe -np 48 /global/home/hpc4995/interface-MLIP-3/mylammps/src/lmp_mpi -in in.run > output.run
