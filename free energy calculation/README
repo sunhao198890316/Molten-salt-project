@@ -15,6 +15,7 @@ This directory provides a detailed overview of the free energy calculations, org
             If the temperature is too low, atomic motion is insufficient (both in speed and range), leading to inaccurate averages. 
             To ensure reliable results, the starting temperature should generally exceed the Debye temperature or be as high as practical.
             Finally, avoid excessive scaling—typically, 300 K is reasonable.
+            free energy calculation/Step-up fodler: mean square displacement calculation/图片2.jpg
 
 
 
