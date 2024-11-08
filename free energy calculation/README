@@ -1,5 +1,8 @@
-This folder contains detailed information on the free energy calculations. 
+This folder contains comprehensive details on the free energy calculations.
 
-Below is a list of the folders within this directory along with a brief description of each folder's specific function:
+Below is an overview of the subfolders within this directory, along with a brief description of each folder's purpose:
 
-Step-up fodler: mean square displacement calculation
+            Step-up fodler: mean square displacement (MSD) calculation: 
+            In this folder, you will find input files and results I used to calculate the MSD at different temperatures.
+
+
