@@ -1,8 +1,20 @@
-This folder contains comprehensive details on the free energy calculations.
-
-Below is an overview of the subfolders within this directory, along with a brief description of each folder's purpose:
+This directory provides a detailed overview of the free energy calculations, organized into subfolders, each serving a specific purpose:
 
             Step-up fodler: mean square displacement (MSD) calculation: 
-            In this folder, you will find input files and results I used to calculate the MSD at different temperatures.
+            Contains input files and results used to calculate the MSD at various temperatures. 
+            These values are crucial for determining the spring constants used in modeling Einstein crystals at different temperatures.
+
+            Free energy calculation
+            This folder includes input files and results for free energy calculations conducted at different temperatures, all based on a 5×5×5 NaCl model. 
+            The spring constants used in these calculations are derived from the MSD values obtained in the "MSD" folder.
+
+            Rescaling calculation
+            This folder contains the input files and results for calculating the temperature dependence of free energy. 
+            The approach involves starting at a specific temperature and determining the free energy across a range of temperatures in a single simulation.
+            However, the starting temperature is crucial and cannot be arbitrary. 
+            If the temperature is too low, atomic motion is insufficient (both in speed and range), leading to inaccurate averages. 
+            To ensure reliable results, the starting temperature should generally exceed the Debye temperature or be as high as practical.
+            Finally, avoid excessive scaling—typically, 300 K is reasonable.
+
 
 
