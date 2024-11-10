@@ -1,0 +1,54 @@
+&control
+    disk_io = 'high',
+    prefix = '1',
+    calculation ='nscf',
+    outdir = './out',
+    pseudo_dir = '/home/haojia/qe_pseudo/'
+    tstress = .true.
+    tprnfor = .true.
+ /
+ &system
+    ibrav=0,
+    nat=3
+    ntyp=2,
+    ecutwfc=66,
+    ecutrho=323,
+    occupations='smearing',
+    smearing = 'gaussian',
+    degauss = 0.02,
+ /
+ &electrons
+    mixing_mode='plain',
+    diagonalization='david',
+    electron_maxstep=1000,
+/
+ &ions
+    ion_dynamics = 'bfgs'
+ /
+ &cell
+    cell_factor = 6
+ /
+CELL_PARAMETERS (angstrom)
+   3.233881702   3.233881697   0.000057878
+   0.000057877   3.233881697   3.233881700
+   3.233881699   0.000057874   3.233881697
+
+
+
+ATOMIC_SPECIES
+
+K 39.0983 K.pbe-spn-kjpaw_psl.1.0.0.UPF
+
+O  15.999 O.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {angstrom}
+
+K             1.6170307322        1.6170307322        1.6170307323
+O             0.0000000000       -0.0000000000       -0.0000000000
+K            -1.6170307322       -1.6170307322       -1.6170307323
+
+
+
+K_POINTS automatic
+   16 16 16 0 0 0
+
