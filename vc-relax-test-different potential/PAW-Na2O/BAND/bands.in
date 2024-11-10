@@ -1,0 +1,6 @@
+&bands
+    prefix = '1'
+    outdir = './out'
+    filband = 'bands.dat'
+/
+
