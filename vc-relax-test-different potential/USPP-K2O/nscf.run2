@@ -1,0 +1,186 @@
+
+     Program PWSCF v.6.6 starts on 17Oct2024 at  9:42:39 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on    1104 processor cores
+     Number of MPI processes:                48
+     Threads/MPI process:                    23
+
+     MPI processes distributed on     2 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      48
+     Fft bands division:     nmany     =       1
+     Waiting for input...
+     Reading input from standard input
+Warning: card  &IONS ignored
+Warning: card     ION_DYNAMICS = 'BFGS' ignored
+Warning: card  / ignored
+Warning: card  &CELL ignored
+Warning: card     CELL_FACTOR = 6 ignored
+Warning: card  / ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+
+     Atomic positions and unit cell read from directory:
+     ./out/Na_expansion01.save/
+     Atomic positions from file used, from input discarded
+
+     Message from routine readpp:
+     file ./out/Na_expansion01.save/O.pbe-n-rrkjus_psl.1.0.0.UPF not found
+     file K.pbe-spn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  3S renormalized
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     scalapack distributed-memory algorithm (size of sub-group:  6*  6 procs)
+
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          34      34      9                  910      910     133
+     Max          35      35     10                  913      913     136
+     Sum        1639    1639    451                43715    43715    6423
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =       8.6146  a.u.
+     unit-cell volume          =     451.9974 (a.u.)^3
+     number of atoms/cell      =            3
+     number of atomic types    =            2
+     number of electrons       =        24.00
+     number of Kohn-Sham states=           40
+     kinetic-energy cutoff     =      80.0000  Ry
+     charge density cutoff     =     320.0000  Ry
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=   8.614605  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.707107   0.707107   0.000060 )  
+               a(2) = (   0.000060   0.707107   0.707107 )  
+               a(3) = (   0.707107   0.000060   0.707107 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  0.707137  0.707137 -0.707197 )  
+               b(2) = ( -0.707197  0.707137  0.707137 )  
+               b(3) = (  0.707137 -0.707197  0.707137 )  
+
+
+     PseudoPot. # 1 for K  read from file:
+     /global/home/hpc4995/potential/K.pbe-spn-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 897b700350bb708b0563e904352feb48
+     Pseudo is Ultrasoft + core correction, Zval =  9.0
+     Generated using "atomic" code by A. Dal Corso v.6.2.2
+     Using radial grid of 1165 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for O  read from file:
+     /global/home/hpc4995/potential/O.pbe-n-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 91400c9766925bcf19f520983a725ff0
+     Pseudo is Ultrasoft + core correction, Zval =  6.0
+     Generated using "atomic" code by A. Dal Corso v.6.3MaX
+     Using radial grid of 1095 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        K              9.00    39.09830     K ( 1.00)
+        O              6.00    15.99900     O ( 1.00)
+
+     12 Sym. Ops., with inversion, found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           K   tau(   1) = (   0.3471758   0.3471758   0.3471758  )
+         2           O   tau(   2) = (   0.0000000  -0.0000000   0.0000000  )
+         3           K   tau(   3) = (  -0.3471758  -0.3471758  -0.3471758  )
+
+     number of k points=    43  Gaussian smearing, width (Ry)=  0.0200
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0465116
+        k(    2) = (   0.0441960   0.0441960  -0.0441998), wk =   0.0465116
+        k(    3) = (   0.0883921   0.0883921  -0.0883996), wk =   0.0465116
+        k(    4) = (   0.1325881   0.1325881  -0.1325994), wk =   0.0465116
+        k(    5) = (   0.1767842   0.1767842  -0.1767992), wk =   0.0465116
+        k(    6) = (   0.2209802   0.2209802  -0.2209990), wk =   0.0465116
+        k(    7) = (   0.2651763   0.2651763  -0.2651988), wk =   0.0465116
+        k(    8) = (   0.3093723   0.3093723  -0.3093986), wk =   0.0465116
+        k(    9) = (   0.3535684   0.3535684  -0.3535984), wk =   0.0465116
+        k(   10) = (   0.2651688   0.4419605  -0.2652063), wk =   0.0465116
+        k(   11) = (   0.1767692   0.5303526  -0.1768142), wk =   0.0465116
+        k(   12) = (   0.0883696   0.6187447  -0.0884221), wk =   0.0465116
+        k(   13) = (  -0.0000300   0.7071368  -0.0000300), wk =   0.0465116
+        k(   14) = (   0.0883621   0.6187372   0.0883621), wk =   0.0465116
+        k(   15) = (   0.1767542   0.5303376   0.1767542), wk =   0.0465116
+        k(   16) = (   0.2651463   0.4419380   0.2651463), wk =   0.0465116
+        k(   17) = (   0.3535384   0.3535384   0.3535384), wk =   0.0465116
+        k(   18) = (   0.3240533   0.3240533   0.3240533), wk =   0.0465116
+        k(   19) = (   0.2946389   0.2946389   0.2946389), wk =   0.0465116
+        k(   20) = (   0.2651538   0.2651538   0.2651538), wk =   0.0465116
+        k(   21) = (   0.2356687   0.2356687   0.2356687), wk =   0.0465116
+        k(   22) = (   0.2062543   0.2062543   0.2062543), wk =   0.0465116
+        k(   23) = (   0.1767692   0.1767692   0.1767692), wk =   0.0465116
+        k(   24) = (   0.1472841   0.1472841   0.1472841), wk =   0.0465116
+        k(   25) = (   0.1178697   0.1178697   0.1178697), wk =   0.0465116
+        k(   26) = (   0.0883846   0.0883846   0.0883846), wk =   0.0465116
+        k(   27) = (   0.0588995   0.0588995   0.0588995), wk =   0.0465116
+        k(   28) = (   0.0294851   0.0294851   0.0294851), wk =   0.0465116
+        k(   29) = (   0.0000000   0.0000000   0.0000000), wk =   0.0465116
+        k(   30) = (   0.0441960  -0.0441998   0.0441960), wk =   0.0465116
+        k(   31) = (   0.0883921  -0.0883996   0.0883921), wk =   0.0465116
+        k(   32) = (   0.1325881  -0.1325994   0.1325881), wk =   0.0465116
+        k(   33) = (   0.1767842  -0.1767992   0.1767842), wk =   0.0465116
+        k(   34) = (   0.2209802  -0.2209990   0.2209802), wk =   0.0465116
+        k(   35) = (   0.2651763  -0.2651988   0.2651763), wk =   0.0465116
+        k(   36) = (   0.3093723  -0.3093986   0.3093723), wk =   0.0465116
+        k(   37) = (   0.3535684  -0.3535984   0.3535684), wk =   0.0465116
+        k(   38) = (   0.4124729  -0.2946939   0.2946589), wk =   0.0465116
+        k(   39) = (   0.4714481  -0.2357187   0.2356787), wk =   0.0465116
+        k(   40) = (   0.5303526  -0.1768142   0.1767692), wk =   0.0465116
+        k(   41) = (   0.5892571  -0.1179097   0.1178597), wk =   0.0465116
+        k(   42) = (   0.6482323  -0.0589345   0.0588795), wk =   0.0465116
+        k(   43) = (   0.7071368  -0.0000300  -0.0000300), wk =   0.0465116
+
+     Dense  grid:    43715 G-vectors     FFT dimensions: (  50,  50,  50)
+
+     Estimated max dynamical RAM per process >       6.10 MB
+
+     Estimated total dynamical RAM >     293.03 MB
+
+     Check: negative core charge=   -0.000002
+
+     The potential is recalculated from file :
+     ./out/Na_expansion01.save/charge-density
+
+     Starting wfcs are   20 randomized atomic wfcs +   20 random wfcs
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap

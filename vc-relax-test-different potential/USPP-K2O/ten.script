@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --account=def-hpcg1725
+
+#SBATCH --partition=gpu-lkb
+#SBATCH --qos=lkb-gpu
+
+#SBATCH --nodes=2
+#SBATCH --ntasks=24
+#SBATCH --cpus-per-task=1
+
+#SBATCH --job-name=Na-O
+#SBATCH --time=00-11:55 # time (DD-HH:MM)
+#SBATCH --output=out.md.run
+#SBATCH --mem=15G
+
+
+module load       StdEnv/2020  gcc/9.3.0  openmpi/4.0.3
+module load	quantumespresso/6.6
+
+cd $SLURM_SUBMIT_DIR
+
+mpirun --oversubscribe -np 48 pw.x < nscf.in > nscf.run2
