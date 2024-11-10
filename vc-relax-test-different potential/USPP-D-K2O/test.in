@@ -1,0 +1,43 @@
+&control
+    disk_io = 'high',
+    prefix = 'Na_expansion01',
+    calculation ='scf',
+    outdir = './out',
+    pseudo_dir = '/global/home/hpc4995/potential/'
+    tstress = .true.
+    tprnfor = .true.
+ /
+ &system
+    ibrav=0,
+    nat=2,
+    ntyp=2,
+    ecutwfc=50,
+    occupations='smearing',
+    smearing = 'gaussian',
+    degauss = 0.01,
+    vdw_corr='grimme-d2',
+ /
+ &electrons
+    mixing_mode='plain',
+    diagonalization='david',
+/
+ &ions
+    ion_dynamics = 'bfgs'
+ /
+ &cell
+    cell_factor = 6
+ /
+CELL_PARAMETERS (angstrom)
+   5.283830639   5.283830635   0.001110972
+   0.001110971   5.283830635   5.283830637
+   5.283830636   0.001110968   5.283830634
+ATOMIC_SPECIES
+Na 22.99  Na.pbe-mt_fhi.UPF
+Cl 35.453 Cl.pbe-mt_fhi.UPF
+
+ATOMIC_POSITIONS (angstrom)
+Na            2.6716417826        2.6716417822        2.6716417835
+Cl           -0.1243984005       -0.1243984003       -0.1243984007
+
+K_POINTS automatic
+13 13 13 1 1 1
