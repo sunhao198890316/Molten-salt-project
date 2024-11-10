@@ -1,0 +1,149 @@
+
+     Program PWSCF v.7.1 starts on 23Oct2024 at 14:16:19 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on     288 processor cores
+     Number of MPI processes:                24
+     Threads/MPI process:                    12
+
+     MPI processes distributed on     1 nodes
+     639653 MiB available memory on the printing compute node when the environment starts
+
+     Waiting for input...
+     Reading input from standard input
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= R2SCAN
+                           (   0   0   0   0   0 497 498)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+
+     R & G space division:  proc/nbgrp/npool/nimage =      24
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         105     105     30                 3511     3511     538
+     Max         106     106     31                 3516     3516     541
+     Sum        2527    2527    733                84301    84301   12939
+
+     Using Slab Decomposition
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =       7.5835  a.u.
+     unit-cell volume          =     308.1008 (a.u.)^3
+     number of atoms/cell      =            3
+     number of atomic types    =            2
+     number of electrons       =        24.00
+     number of Kohn-Sham states=           16
+     kinetic-energy cutoff     =     160.0000  Ry
+     charge density cutoff     =     640.0000  Ry
+     scf convergence threshold =      1.0E-06
+     mixing beta               =       0.7000
+     number of iterations used =            8  plain     mixing
+     energy convergence thresh.=      1.0E-04
+     force convergence thresh. =      1.0E-03
+     press convergence thresh. =      5.0E-01
+     Exchange-correlation= R2SCAN
+                           (   0   0   0   0   0 497 498)
+     nstep                     =           50
+
+
+     celldm(1)=   7.583545  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.707107   0.707107   0.000444 )  
+               a(2) = (   0.000444   0.707107   0.707107 )  
+               a(3) = (   0.707107   0.000444   0.707107 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  0.707329  0.707329 -0.707773 )  
+               b(2) = ( -0.707773  0.707329  0.707329 )  
+               b(3) = (  0.707329 -0.707773  0.707329 )  
+
+
+     PseudoPot. # 1 for Na read from file:
+     /home/haojia/qe_pseudo/Na_ONCV_PBE-1.2.upf
+     MD5 check sum: 425b17ce8ead78efa4860b7b3310c7e3
+     Pseudo is Norm-conserving, Zval =  9.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of  602 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+
+     PseudoPot. # 2 for O  read from file:
+     /home/haojia/qe_pseudo/O_ONCV_PBE-1.2.upf
+     MD5 check sum: e36c48deb68f4e355fffe4602be2c42c
+     Pseudo is Norm-conserving, Zval =  6.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of  602 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+
+     atomic species   valence    mass     pseudopotential
+        Na             9.00    22.99000     Na( 1.00)
+        O              6.00    15.99900     O ( 1.00)
+
+     12 Sym. Ops., with inversion, found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Na  tau(   1) = (   0.3536335   0.3536335   0.3536335  )
+         2           O   tau(   2) = (  -0.0000000   0.0000000   0.0000000  )
+         3           Na  tau(   3) = (  -0.3536335  -0.3536335  -0.3536335  )
+
+     number of k points=   231  Gaussian smearing, width (Ry)=  0.0200
+
+     Number of k-points >= 100: set verbosity='high' to print them.
+
+     Dense  grid:    84301 G-vectors     FFT dimensions: (  64,  64,  64)
+
+     Estimated max dynamical RAM per process >       5.30 MB
+
+     Estimated total dynamical RAM >     127.30 MB
+
+     WARNING: libxc functional with ID  497 depends
+      on external parameters: check the user_guide of
+      QE if you need to modify them or to check their
+      default values.
+
+     Initial potential from superposition of free atoms
+
+     starting charge      23.7256, renormalised to      24.0000
+     Starting wfcs are random
+
+     total cpu time spent up to now is    25963.7 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   160.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
