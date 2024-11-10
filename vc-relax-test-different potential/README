@@ -1,0 +1,4 @@
+This folder contains the input files for the calculation of band structure of K2O and Na2O oxide.
+I used a primitive cell for my test.
+relax.in bands.in nscf.in are input file. The corresponding files with *.out are output files
+These results are easy to recalculate. I upload here mainly for the parameter and band path.
