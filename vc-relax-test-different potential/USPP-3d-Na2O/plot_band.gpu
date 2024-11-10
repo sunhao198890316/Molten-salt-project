@@ -1,0 +1,25 @@
+# Gnuplot script to plot band structure from bands.dat
+
+# Set terminal and output settings (PNG format, size, and resolution)
+set terminal pngcairo enhanced size 800,600
+set output 'band_structure.png'
+
+# Set labels for axes
+set xlabel 'K-point Path'
+set ylabel 'Energy (eV)'
+
+# Set title
+set title 'Band Structure'
+
+# Draw a horizontal line at zero energy (e.g., Fermi level)
+set arrow from graph 0,0 to graph 1,0 nohead lt 0 lw 1
+
+# Customize grid and line styles
+set grid
+
+# Define high-symmetry points along the k-point path
+set xtics ("Γ" 0, "X" 10, "W" 19, "Γ" 20)
+
+# Plot the data from bands.dat
+plot for [i=2:41] 'bands.dat' using 1:i with lines title sprintf('Band %d', i-1) lw 1
+

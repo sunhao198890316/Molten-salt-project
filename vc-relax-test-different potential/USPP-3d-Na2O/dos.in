@@ -1,0 +1,9 @@
+&dos
+    prefix = 'your_system_name',
+    outdir = './tmp',
+    fildos = 'dos.dat',
+    Emin = -10.0,       ! Minimum energy for DOS
+    Emax = 10.0,        ! Maximum energy for DOS
+    DeltaE = 0.02       ! Energy resolution for DOS
+/
+
