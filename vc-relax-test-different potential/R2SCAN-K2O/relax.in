@@ -1,0 +1,58 @@
+&control
+    disk_io = 'high',
+    prefix = '1',
+    restart_mode = 'restart',
+    calculation ='vc-relax',
+    outdir = './out',
+    pseudo_dir = '/home/haojia/qe_pseudo/'
+    tstress = .true.
+    tprnfor = .true.
+ /
+ &system
+    ibrav=0,
+    nat=3
+    ntyp=2,
+ecutwfc = 160
+ecutrho = 640
+    
+    occupations='smearing',
+    smearing = 'gaussian',
+    degauss = 0.02,
+input_dft  = 'R2SCAN'
+
+
+
+/
+ &electrons
+    mixing_mode='plain',
+    diagonalization='david',
+    electron_maxstep=1000,
+/
+ &ions
+    ion_dynamics = 'bfgs'
+ /
+ &cell
+    cell_factor = 6
+ /
+CELL_PARAMETERS {angstrom}
+
+   3.223454319   3.223454315   0.000273414
+   0.000273413   3.223454315   3.223454317
+   3.223454316   0.000273410   3.223454314
+
+
+ATOMIC_SPECIES
+
+K 39.098  K_ONCV_PBE-1.2.upf
+
+O  15.999 O_ONCV_PBE-1.2.upf
+ATOMIC_POSITIONS {angstrom}
+
+K             1.6122975139        1.6122975139        1.6122975140
+O             0.0000000000       -0.0000000000        0.0000000000
+K            -1.6122975139       -1.6122975139       -1.6122975140
+
+
+K_POINTS automatic
+   13 13 13 0 0 0
+
